@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: queue.starter
+---
+testFramework: kotlintest
+sourceLanguage: kotlin

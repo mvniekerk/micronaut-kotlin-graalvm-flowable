@@ -1,0 +1,43 @@
+
+micronaut:
+  application:
+    name: queue-starter
+jackson:
+  bean-introspection-module: true
+
+spring:
+  datasource:
+    url: "jdbc:postgresql:flowable"
+    driverClassName: org.postgresql.Driver
+    username: flowable
+    password: flowable
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+processEngineConfiguration:
+  url: "jdbc:postgresql:flowable"
+  driver: org.postgresql.Driver
+  username: flowable
+  password: flowable
+#  databaseSchemaUpdate: true
+
+#  asyncExecutorActivate: false
+
+#  mailServerHost: mail.my-corp.com
+#  mailServerPort: 5025
+---
+datasources:
+  default:
+    url: "jdbc:postgresql:flowable"
+    driverClassName: org.postgresql.Driver
+    username: flowable
+    password: flowable
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+jpa:
+  default:
+    properties:
+      hibernate:
+        bytecode:
+          provider: none
+        hbm2ddl:
+          auto: update
