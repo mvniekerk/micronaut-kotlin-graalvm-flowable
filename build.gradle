@@ -39,9 +39,6 @@ dependencies {
 //        exclude group: 'org.apache.commons', module: 'commons-email'
 //        exclude group: 'org.slf4j', module: 'jcl-over-slf4j'
     }
-    compile 'org.flowable.experimental:flowable-serverless:6.4.0-SNAPSHOT', {
-        exclude group: 'org.flowable', module: 'flowable-engine'
-    }
     implementation "io.micronaut:micronaut-spring"
     compile 'org.postgresql:postgresql:42.2.8'
     compileOnly "com.oracle.substratevm:svm"
